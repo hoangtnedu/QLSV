@@ -30,7 +30,6 @@ namespace IT02K20
             {
                 connection.Open();
                 lblThongBao.Text = "Kết nối thành công đến server " + txtServer.Text;
-
             }
             catch(SqlException ex)
             {
@@ -40,7 +39,6 @@ namespace IT02K20
             {
                 connection.Dispose();
             }
-
         }
 
         private void btnWindows_Click(object sender, EventArgs e)
@@ -49,12 +47,10 @@ namespace IT02K20
                 "Initial Catalog = QLSV;" +
                 "Integrated Security = True";
             SqlConnection connection = new SqlConnection(sqlConnectionString);
-
             try
             {
                 connection.Open();
                 lblThongBao.Text = "Kết nối thành công đến server " + txtServer.Text;
-
             }
             catch (SqlException ex)
             {

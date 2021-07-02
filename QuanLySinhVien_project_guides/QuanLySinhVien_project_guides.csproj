@@ -68,8 +68,10 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="DAL\clsConnect.cs" />
+    <Compile Include="DAL\ClsMonhoc.cs" />
     <Compile Include="DAL\clsSinhVien.cs" />
     <Compile Include="DAL\IConnect.cs" />
+    <Compile Include="DAL\IMonhoc.cs" />
     <Compile Include="DAL\ISinhVien.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
