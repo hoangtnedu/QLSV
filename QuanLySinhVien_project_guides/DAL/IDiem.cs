@@ -13,8 +13,8 @@ namespace QuanLySinhVien_project_guides.DAL
         float DiemLan1 { get; set; }
         float DiemLan2 { get; set; }
         string GhiChu { get; set; }
-        int Them1Diem();
-        int Xoa1Diem();
-        int Sua1Diem();
+        int Them1Diem(string strSqlConnection);
+        int Xoa1Diem(string strSqlConnection);
+        int Sua1Diem(string strSqlConnection);
     }
 }
