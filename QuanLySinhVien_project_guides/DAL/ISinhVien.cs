@@ -13,6 +13,7 @@ namespace QuanLySinhVien_project_guides.DAL
         string SDT { get; set; }
         string QueQuan { get; set; }
         string GhiChu { get; set; }
+        DateTime NgaySinh { get; set; }
         int Them1SV(string strSqlConnection);
         int Sua1SV(string strSqlConnection);
         int Xoa1SV(string strSqlConnection);

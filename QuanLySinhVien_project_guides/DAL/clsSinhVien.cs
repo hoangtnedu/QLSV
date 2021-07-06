@@ -15,10 +15,12 @@ namespace QuanLySinhVien_project_guides.DAL
         public string SDT { get; set; }
         public string QueQuan { get; set; }
         public string GhiChu { get; set; }
+        public DateTime NgaySinh { get; set; }
         public clsSinhVien(string _masv, string _tensv,
-            string _sdt, string _quequan,string _ghichu)
+            string _sdt, string _quequan,string _ghichu, DateTime _ngaysinh)
         {
             MaSV = _masv; TenSV = _tensv; SDT = _sdt; QueQuan = _quequan;GhiChu = _ghichu;
+            NgaySinh = _ngaysinh;
         }
         public int Them1SV(string strConection)
         {
@@ -33,6 +35,7 @@ namespace QuanLySinhVien_project_guides.DAL
             command.Parameters.AddWithValue("@SDT", SDT);
             command.Parameters.AddWithValue("@QueQuan", QueQuan);
             command.Parameters.AddWithValue("@GhiChu", GhiChu);
+            command.Parameters.AddWithValue("@NgaySinh", GhiChu);
             command.ExecuteNonQuery();
             command.Dispose();
             connection.Dispose();
@@ -49,6 +52,7 @@ namespace QuanLySinhVien_project_guides.DAL
             command.Parameters.AddWithValue("@TenSV", TenSV);
             command.Parameters.AddWithValue("@SDT", SDT);
             command.Parameters.AddWithValue("@QueQuan", QueQuan);
+            command.Parameters.AddWithValue("@NgaySinh", NgaySinh);
             command.Parameters.AddWithValue("@GhiChu", GhiChu);
             command.ExecuteNonQuery();
             command.Dispose();

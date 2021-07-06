@@ -67,6 +67,7 @@ namespace QuanLySinhVien_project_guides.GUI
             txtSDT.DataBindings.Add("Text", dt, "SDT",true);
             txtQueQuan.DataBindings.Add("Text",dt,"QueQuan",true);
             txtGhiChu.DataBindings.Add("Text", dt, "Ghichu",true);
+            dtpNgaySinh.DataBindings.Add("Value", dt, "Ngaysinh", true);
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -100,8 +101,16 @@ namespace QuanLySinhVien_project_guides.GUI
         {
             DAL.clsSinhVien sv = new DAL.clsSinhVien
                 (txtMaSV.Text, txtTenSV.Text
-                , txtSDT.Text, txtQueQuan.Text, txtGhiChu.Text);
+                , txtSDT.Text, txtQueQuan.Text, txtGhiChu.Text,dtpNgaySinh.Value);
             sv.Them1SV(StrConectionString);
+        }
+
+        private void btnUpdatebyClass_Click(object sender, EventArgs e)
+        {
+            DAL.clsSinhVien sv = new DAL.clsSinhVien
+               (txtMaSV.Text, txtTenSV.Text
+               , txtSDT.Text, txtQueQuan.Text, txtGhiChu.Text,dtpNgaySinh.Value);
+            sv.Sua1SV(StrConectionString);
         }
     }
 }

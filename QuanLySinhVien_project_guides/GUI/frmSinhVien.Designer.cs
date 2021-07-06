@@ -44,6 +44,9 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnAddbyClass = new System.Windows.Forms.Button();
+            this.btnUpdatebyClass = new System.Windows.Forms.Button();
+            this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTTSV)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,7 +66,7 @@
             this.dgvTTSV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTTSV.Location = new System.Drawing.Point(12, 131);
             this.dgvTTSV.Name = "dgvTTSV";
-            this.dgvTTSV.Size = new System.Drawing.Size(640, 180);
+            this.dgvTTSV.Size = new System.Drawing.Size(743, 180);
             this.dgvTTSV.TabIndex = 7;
             // 
             // btnShowTT
@@ -112,10 +115,10 @@
             // txtGhiChu
             // 
             this.txtGhiChu.BackColor = System.Drawing.SystemColors.Info;
-            this.txtGhiChu.Location = new System.Drawing.Point(486, 47);
+            this.txtGhiChu.Location = new System.Drawing.Point(486, 74);
             this.txtGhiChu.Multiline = true;
             this.txtGhiChu.Name = "txtGhiChu";
-            this.txtGhiChu.Size = new System.Drawing.Size(100, 59);
+            this.txtGhiChu.Size = new System.Drawing.Size(201, 45);
             this.txtGhiChu.TabIndex = 6;
             // 
             // label2
@@ -157,7 +160,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(423, 71);
+            this.label6.Location = new System.Drawing.Point(433, 93);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(47, 13);
             this.label6.TabIndex = 4;
@@ -177,7 +180,7 @@
             // btnUpdate
             // 
             this.btnUpdate.BackColor = System.Drawing.SystemColors.Info;
-            this.btnUpdate.Location = new System.Drawing.Point(175, 318);
+            this.btnUpdate.Location = new System.Drawing.Point(272, 317);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(75, 23);
             this.btnUpdate.TabIndex = 10;
@@ -187,19 +190,52 @@
             // 
             // btnAddbyClass
             // 
-            this.btnAddbyClass.Location = new System.Drawing.Point(256, 317);
+            this.btnAddbyClass.BackColor = System.Drawing.SystemColors.Info;
+            this.btnAddbyClass.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnAddbyClass.Location = new System.Drawing.Point(175, 317);
             this.btnAddbyClass.Name = "btnAddbyClass";
             this.btnAddbyClass.Size = new System.Drawing.Size(91, 23);
             this.btnAddbyClass.TabIndex = 11;
             this.btnAddbyClass.Text = "Add by Class";
-            this.btnAddbyClass.UseVisualStyleBackColor = true;
+            this.btnAddbyClass.UseVisualStyleBackColor = false;
             this.btnAddbyClass.Click += new System.EventHandler(this.btnAddbyClass_Click);
+            // 
+            // btnUpdatebyClass
+            // 
+            this.btnUpdatebyClass.BackColor = System.Drawing.SystemColors.Info;
+            this.btnUpdatebyClass.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnUpdatebyClass.Location = new System.Drawing.Point(354, 318);
+            this.btnUpdatebyClass.Name = "btnUpdatebyClass";
+            this.btnUpdatebyClass.Size = new System.Drawing.Size(116, 23);
+            this.btnUpdatebyClass.TabIndex = 12;
+            this.btnUpdatebyClass.Text = "Update by Class";
+            this.btnUpdatebyClass.UseVisualStyleBackColor = false;
+            this.btnUpdatebyClass.Click += new System.EventHandler(this.btnUpdatebyClass_Click);
+            // 
+            // dtpNgaySinh
+            // 
+            this.dtpNgaySinh.Location = new System.Drawing.Point(487, 46);
+            this.dtpNgaySinh.Name = "dtpNgaySinh";
+            this.dtpNgaySinh.Size = new System.Drawing.Size(200, 20);
+            this.dtpNgaySinh.TabIndex = 13;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(421, 50);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(60, 13);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Ngày sinh: ";
             // 
             // frmSinhVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(664, 349);
+            this.ClientSize = new System.Drawing.Size(767, 349);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.dtpNgaySinh);
+            this.Controls.Add(this.btnUpdatebyClass);
             this.Controls.Add(this.btnAddbyClass);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnAdd);
@@ -242,5 +278,8 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnAddbyClass;
+        private System.Windows.Forms.Button btnUpdatebyClass;
+        private System.Windows.Forms.DateTimePicker dtpNgaySinh;
+        private System.Windows.Forms.Label label7;
     }
 }
