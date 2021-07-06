@@ -38,7 +38,23 @@ namespace QuanLySinhVien_project_guides.DAL
             connection.Dispose();
             return 0;
         }
-        public int Sua1SV(string strConection) { return 0; }
+        public int Sua1SV(string strConection) {
+            SqlConnection connection = new SqlConnection(strConection);
+            if (connection.State == ConnectionState.Closed) connection.Open();
+            SqlCommand command = new SqlCommand();
+            command.Connection = connection;
+            command.CommandText = "sp_Sua1SV";
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.AddWithValue("@MaSV", MaSV);
+            command.Parameters.AddWithValue("@TenSV", TenSV);
+            command.Parameters.AddWithValue("@SDT", SDT);
+            command.Parameters.AddWithValue("@QueQuan", QueQuan);
+            command.Parameters.AddWithValue("@GhiChu", GhiChu);
+            command.ExecuteNonQuery();
+            command.Dispose();
+            connection.Dispose();
+            return 0;
+          }
         public int Xoa1SV(string strConection) { return 0; }
     }
 }
