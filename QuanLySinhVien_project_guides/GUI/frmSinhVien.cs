@@ -98,7 +98,8 @@ namespace QuanLySinhVien_project_guides.GUI
 
         private void btnAddbyClass_Click(object sender, EventArgs e)
         {
-            DAL.clsSinhVien sv = new DAL.clsSinhVien(txtMaSV.Text, txtTenSV.Text
+            DAL.clsSinhVien sv = new DAL.clsSinhVien
+                (txtMaSV.Text, txtTenSV.Text
                 , txtSDT.Text, txtQueQuan.Text, txtGhiChu.Text);
             sv.Them1SV(StrConectionString);
         }
