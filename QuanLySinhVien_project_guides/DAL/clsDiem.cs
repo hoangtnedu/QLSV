@@ -13,15 +13,15 @@ namespace QuanLySinhVien_project_guides.DAL
         public float DiemLan1 { get; set; }
         public float DiemLan2 { get; set; }
         public string GhiChu { get; set; }
-        public int Them1Diem()
+        public int Them1Diem(string strSqlConnection)
         {
             return 0;
         }
-        public int Xoa1Diem()
+        public int Xoa1Diem(string strSqlConnection)
         {
             return 0;
         }
-        public int Sua1Diem()
+        public int Sua1Diem(string strSqlConnection)
         {
             return 0;
         }
