@@ -56,6 +56,7 @@ namespace QuanLySinhVien_project_guides.GUI
             SqlCommand command = new SqlCommand(text, connection);
             SqlDataAdapter da = new SqlDataAdapter(command);
             da.Fill(dt);
+            //Hiển thị thông tin lên datagridview.
             dgvTTSV.DataSource = dt;            
             DataBinding(dt);  
         }
@@ -75,9 +76,10 @@ namespace QuanLySinhVien_project_guides.GUI
             //dt.Clear();
             SqlConnection connection = new SqlConnection(StrConectionString);
             string strSqlCommand = "Update tblSinhVien " +
-                "set TenSV ='" + txtTenSV.Text + "', SDT='" + txtSDT.Text + "'," +
-                "QueQuan='" + txtQueQuan.Text + "',GhiChu='" + txtGhiChu.Text +
-                "'where MaSV='" + txtMaSV.Text + "'";
+                "set TenSV ='" + txtTenSV.Text.Trim() + "', SDT='" + txtSDT.Text.Trim() + "'," +
+                "QueQuan='" + txtQueQuan.Text.Trim() + "',GhiChu='" + txtGhiChu.Text.Trim() +
+                "',NgaySinh='" + dtpNgaySinh.Value +
+                "'where MaSV='" + txtMaSV.Text.Trim() + "'";
             if (connection.State == ConnectionState.Closed) connection.Open();
             SqlCommand command = new SqlCommand(strSqlCommand, connection);
             command.ExecuteNonQuery();
@@ -108,8 +110,8 @@ namespace QuanLySinhVien_project_guides.GUI
         private void btnUpdatebyClass_Click(object sender, EventArgs e)
         {
             DAL.clsSinhVien sv = new DAL.clsSinhVien
-               (txtMaSV.Text, txtTenSV.Text
-               , txtSDT.Text, txtQueQuan.Text, txtGhiChu.Text,dtpNgaySinh.Value);
+               (txtMaSV.Text.Trim(), txtTenSV.Text.Trim()
+               ,txtSDT.Text.Trim(), txtQueQuan.Text.Trim(), txtGhiChu.Text.Trim(),dtpNgaySinh.Value);
             sv.Sua1SV(StrConectionString);
         }
     }

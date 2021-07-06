@@ -47,6 +47,7 @@
             this.btnUpdatebyClass = new System.Windows.Forms.Button();
             this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
+            this.cachedcRSinhVien1 = new QuanLySinhVien_project_guides.CrystalReport.CachedcRSinhVien();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTTSV)).BeginInit();
             this.SuspendLayout();
             // 
@@ -281,5 +282,6 @@
         private System.Windows.Forms.Button btnUpdatebyClass;
         private System.Windows.Forms.DateTimePicker dtpNgaySinh;
         private System.Windows.Forms.Label label7;
+        private CrystalReport.CachedcRSinhVien cachedcRSinhVien1;
     }
 }
