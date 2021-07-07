@@ -35,7 +35,7 @@ namespace QuanLySinhVien_project_guides.DAL
             command.Parameters.AddWithValue("@SDT", SDT);
             command.Parameters.AddWithValue("@QueQuan", QueQuan);
             command.Parameters.AddWithValue("@GhiChu", GhiChu);
-            command.Parameters.AddWithValue("@NgaySinh", GhiChu);
+            command.Parameters.AddWithValue("@NgaySinh", NgaySinh);
             command.ExecuteNonQuery();
             command.Dispose();
             connection.Dispose();
