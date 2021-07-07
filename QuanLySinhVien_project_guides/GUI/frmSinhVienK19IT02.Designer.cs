@@ -30,6 +30,7 @@ namespace QuanLySinhVien_project_guides.GUI
         private void InitializeComponent()
         {
             this.crvSinhvienK19It02 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.cachedcRSinhVien1 = new QuanLySinhVien_project_guides.CrystalReport.CachedcRSinhVien();
             this.SuspendLayout();
             // 
             // crvSinhvienK19It02
@@ -59,5 +60,6 @@ namespace QuanLySinhVien_project_guides.GUI
         #endregion
 
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crvSinhvienK19It02;
+        private CrystalReport.CachedcRSinhVien cachedcRSinhVien1;
     }
 }
