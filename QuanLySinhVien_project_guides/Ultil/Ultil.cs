@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace QuanLySinhVien_project_guides.Ultil
 {
-   public class Ultil
+    public class Ultil
     {
-        public bool ExcuteProcedure(string []paras, string []values,string strConnection,string sp_name)
+        public static int ExcuteProcedure(string[] paras, object[] values, string strConnection, string sp_name)
         {
-            bool kt = false;
+            int kt = -1;
             SqlConnection connection = new SqlConnection(strConnection);
             if (connection.State == ConnectionState.Closed) connection.Open();
             SqlCommand command = new SqlCommand();
@@ -26,16 +26,14 @@ namespace QuanLySinhVien_project_guides.Ultil
             try
             {
                 command.ExecuteNonQuery();
-                kt = true;
+                kt = 0;
             }
             catch (Exception)
-            {                
-            }    
-            
+            {
+            }
             command.Dispose();
             connection.Dispose();
             return kt;
-
         }
     }
 }

@@ -15,15 +15,27 @@ namespace QuanLySinhVien_project_guides.DAL
         public string GhiChu { get; set; }
         public int Them1Diem(string strSqlConnection)
         {
-            return 0;
+            return Ultil.Ultil.ExcuteProcedure(
+            new string[] { "@MaSV", "@MaMH","@DiemLan1","@DiemLan2","@GhiChu" },
+            new object[] { MaSV, MaMH,DiemLan1,DiemLan2,GhiChu },
+            strSqlConnection,
+            "Sp_Insert1Diem");
         }
         public int Xoa1Diem(string strSqlConnection)
         {
-            return 0;
+            return Ultil.Ultil.ExcuteProcedure(
+            new string[] { "@MaSV", "@MaMH" },
+            new string[] { MaSV, MaMH },
+            strSqlConnection,
+            "Sp_Delete1Diem");
         }
         public int Sua1Diem(string strSqlConnection)
         {
-            return 0;
+            return Ultil.Ultil.ExcuteProcedure(
+            new string[] { "@MaSV", "@MaMH", "@DiemLan1", "@DiemLan2", "@GhiChu" },
+            new object[] { MaSV, MaMH, DiemLan1, DiemLan2, GhiChu },
+            strSqlConnection,
+            "Sp_Update1Diem ");
         }
     }
 }
