@@ -44,7 +44,7 @@ namespace QuanLySinhVien_project_guides.DAL
         public int Sua1SV(string strConection) {
             SqlConnection connection = new SqlConnection(strConection);
             if (connection.State == ConnectionState.Closed) connection.Open();
-            SqlCommand command = new SqlCommand();
+            SqlCommand command = new SqlCommand();            
             command.Connection = connection;
             command.CommandText = "sp_Sua1SV";
             command.CommandType = CommandType.StoredProcedure;

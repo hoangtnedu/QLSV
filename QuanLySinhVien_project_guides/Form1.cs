@@ -19,8 +19,7 @@ namespace QuanLySinhVien_project_guides
         string strConectionstring;
         private void kếtNốiCSDLToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            GUI.FrmConnect frm = new GUI.FrmConnect();
-          
+            GUI.FrmConnect frm = new GUI.FrmConnect();          
             frm.ShowDialog();
             strConectionstring = frm.StrConectionString;
         }
