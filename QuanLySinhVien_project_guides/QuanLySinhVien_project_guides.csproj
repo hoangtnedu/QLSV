@@ -110,6 +110,12 @@
     <Compile Include="GUI\frmConnectbyWindows.Designer.cs">
       <DependentUpon>frmConnectbyWindows.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frmMonhoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmMonhoc.Designer.cs">
+      <DependentUpon>frmMonhoc.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmReportSV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmConnectbyWindows.resx">
       <DependentUpon>frmConnectbyWindows.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmMonhoc.resx">
+      <DependentUpon>frmMonhoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmReportSV.resx">
       <DependentUpon>frmReportSV.cs</DependentUpon>
